@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assests/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>blog-page</title>
+</head>
+
+<style>
+
+.blog-section {
+    margin-top: 70px;
+    padding: 50px 0;
+}
+.blog-header h1 {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 8px;
+}
+.blog-header h1::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 40px;
+    content: "";
+    background: #ff6a00;
+    border-radius: 10px;
+}
+.blog-main {
+    padding-top: 25px;
+}
+.blog-main-item-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.blog-main-item-image img {
+    width: 100%;
+    transform: scale(1);
+    transition: .3s;
+    border-radius: 10px;
+}
+.blog-main-item:hover img {
+    transform: scale(1.3) rotate(-10deg);
+}
+.blog-main-item {
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0 0 5px gainsboro;
+    border-radius: 10px;
+}
+.blog-main-item h3 {
+    font-size: 18px;
+    color: gray;
+    font-weight: 500;
+}
+.blog-main-item p {
+    font-size: 14px;
+    color: #403636;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.blog-main-item-content {
+    padding: 20px;
+}
+.blog-banner{
+    margin-top: 50px;
+}
+.blog-banner-image{
+    background-image: url(img/blog/blog-banners.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    border-radius: 20px;
+    position: relative;
+}
+.blog-banner-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: scale(.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+.blog-banner:hover .blog-banner-content{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.blog-banner-content::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: black;
+    opacity: .5;
+    z-index: -1;
+    border-radius: 20px;
+}
+a.blog-banner-btn{
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 0 20px rgb(211, 204, 204);
+    text-decoration: none;
+}
+
+</style>
+
+<body>
+
+<!-- header section starts -->
+
+<div class="header-section">
+    <div class="container">
+        <div class="header-item">
+            <div class="search-bar">
+                <input type="search" id="search-input" placeholder="search-here...">
+                <i class="fa fa-search" id="searchbar-icon"></i>
+            </div>
+            <div class="logo"><a href="index.html"><i class="fas fa-shopping-bag"></i>Ma-Fashion</a></div>
+            <div class="header-right">
+                <div class="header-menu">
+                    <a href="index.html">home</a>
+                    <a href="shop.html">shop</a>
+                    <a href="blog.html">blog</a>
+                    <a href="about.html">about</a>
+                    <a href="contact.html">contact us</a>
+                </div>
+                <div class="header-icon">
+                    <i class="fas fa-search" id="searchbarsearchIcon" onclick="searchIcon()"></i>
+                    <i class="fa fa-times" id="search-cross" onclick="searchcrossBar()"></i>
+                    <a href="cart.html"><i class="fa fa-cart-arrow-down"></i></a>
+                    <a href="user.html"><i class="fa fa-user"></i></a>
+                    <div class="menubar-icon">
+                    <i class="fa fa-bars" onclick="menuBar()"></i>
+                    <i class="fa fa-times" onclick="crossBar()"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- header section ends -->
+
+<!-- blog section starts -->
+
+<div class="blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="blog-header">
+                    <h1>blog</h1>
+                </div>
+            </div>
+        </div>
+        <div class="blog-main">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="blog-main-item">
+                        <div class="blog-main-item-image">
+                            <img src="img/blog/blog-1.jpg">
+                        </div>
+                        <div class="blog-main-item-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed amet natus consequatur velit similique nemo.</h3>
+                            <p>15 march,2022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="blog-main-item">
+                        <div class="blog-main-item-image">
+                            <img src="img/blog/blog-2.jpg">
+                        </div>
+                        <div class="blog-main-item-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed amet natus consequatur velit similique nemo.</h3>
+                            <p>15 march,2022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="blog-main-item">
+                        <div class="blog-main-item-image">
+                            <img src="img/blog/blog-3.jpg">
+                        </div>
+                        <div class="blog-main-item-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed amet natus consequatur velit similique nemo.</h3>
+                            <p>15 march,2022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="blog-main-item">
+                        <div class="blog-main-item-image">
+                            <img src="img/blog/blog-5.jpg">
+                        </div>
+                        <div class="blog-main-item-content">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed amet natus consequatur velit similique nemo.</h3>
+                            <p>15 march,2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="row">
+           <div class="col-md-12 col-12">
+                <div class="blog-banner">
+                    <div class="blog-banner-image">
+                         <div class="blog-banner-content">
+                             <a href="#" class="blog-banner-btn">view more</a>
+                         </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+       <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="blog-main-item">
+                    <div class="blog-main-item-image">
+                        <img src="img/blog/blog-6.jpg">
+                    </div>
+                    <div class="blog-main-item-content">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed amet natus consequatur velit similique nemo.</h3>
+                        <p>15 march,2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="blog-main-item">
+                    <div class="blog-main-item-image">
+                        <img src="img/blog/blog-7.jpg">
+                    </div>
+                    <div class="blog-main-item-content">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed amet natus consequatur velit similique nemo.</h3>
+                        <p>15 march,2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="blog-main-item">
+                    <div class="blog-main-item-image">
+                        <img src="img/blog/blog-8.jpg">
+                    </div>
+                    <div class="blog-main-item-content">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed amet natus consequatur velit similique nemo.</h3>
+                        <p>15 march,2022</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+
+<!-- blog section starts -->
+
+<!-- footer section starts -->
+
+<div class="footer-section">
+    <div class="footer-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-1-item">
+                        <div class="footer-logo">
+                            <i class="fas fa-shopping-bag"></i>Ma-Fashion
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur in autem illo voluptatem nihil, rerum iusto at minus, consectetur, corrupti doloribus saepe numquam cupiditate suscipit doloremque porro. Necessitatibus, sapiente accusamus!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-1-item">
+                        <h2>featured</h2>
+                        <div class="footer-link">
+                        <a href="#">men</a>
+                        <a href="#">women</a>
+                        <a href="#">boys</a>
+                        <a href="#">girls</a>
+                        <a href="#">cloths</a>
+                        <a href="#">watch</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-1-item">
+                        <h2>contact us</h2>
+                        <div class="footer-contact-item">
+                        <p>address <span>muktagach,mymensingh</span></p>
+                        <p>phone <span>078967890</span></p>
+                        <p>email <span>iujfisd@gmail.com</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-1-item">
+                        <h2>instagram</h2>
+                        <div class="instagram-image">
+                            <img src="img/insta/insta-1.jpg">
+                            <img src="img/insta/insta-2.jpg">
+                            <img src="img/insta/insta-3.jpg">
+                            <img src="img/insta/insta-4.jpg">
+                            <img src="img/insta/insta-5.jpg">
+                            <img src="img/insta/insta-6.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-2">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-4 col-md-4 col-12">
+                   <img src="img/payment.png">
+               </div>
+               <div class="col-lg-4 col-md-4 col-12">
+                <p> &copy;created by <span>Maruf Ahmed</span></p>
+               </div>
+               <div class="col-lg-4 col-md-4 col-12">
+                <div class="footer-2-link">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+               </div>
+           </div>
+       </div>
+    </div>
+</div>
+
+<!-- footer section ends -->
+
+    <!-- js file -->
+    <script src="assests/jquery-3.6.0.min.js"></script>
+    <script src="assests/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

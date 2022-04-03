@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assests/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>user-page</title>
+    <style>
+
+/* singup-form starts*/
+.singup-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    box-shadow: 0 0 5px #c1e5e7;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    display: block;
+}
+.singup-form-item h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #ff6a00;
+    text-transform: capitalize;
+    padding: 10px;
+}
+input[type="text"], input[type="submit"], input[type="password"],input[type="email"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px #c8e1e3;
+    border-radius: 20px;
+    padding: 0 15px;
+    color: gray;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 8px 0;
+}
+input[type="submit"]{
+    width: 150px;
+    background-color: #ffff;
+    transition: .3s;
+}
+input[type="submit"]:hover{
+    background: rgb(226, 221, 221);
+}
+.singup-form-item p{
+    font-size: 16px;
+    color: gray;
+    font-weight: 500;
+    padding-top: 15px;
+    text-transform: capitalize;
+}
+.singup-form-item p a{
+    color: rgb(255, 136, 0);
+}
+.singup-icon i {
+    font-size: 17px;
+    width: 100px;
+    box-shadow: 0 0 5px #bfe9e9;
+    padding: 10px 0px;
+    color: gray;
+    border-radius: 20px;
+    margin: 0 5px;
+    transition: .3s;
+}
+.singup-icon i:hover {
+    background: #e1d7d7;
+}
+
+/* singup-form ends*/
+
+/* login-form starts*/
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    box-shadow: 0 0 5px #c1e5e7;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+}
+.login-form-item h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #ff6a00;
+    text-transform: capitalize;
+    padding: 10px;
+}
+input[type="submit"], input[type="password"],input[type="email"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px #c8e1e3;
+    border-radius: 20px;
+    padding: 0 15px;
+    color: gray;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 8px 0;
+}
+input[type="submit"]{
+    width: 150px;
+    background-color: #ffff;
+    transition: .3s;
+}
+input[type="submit"]:hover{
+    background: rgb(226, 221, 221);
+}
+.login-form-item p{
+    font-size: 16px;
+    color: gray;
+    font-weight: 500;
+    padding-top: 15px;
+    text-transform: capitalize;
+}
+.login-form-item p a{
+    color: rgb(255, 136, 0);
+}
+.login-icon i {
+    font-size: 17px;
+    width: 100px;
+    box-shadow: 0 0 5px #bfe9e9;
+    padding: 10px 0px;
+    color: gray;
+    border-radius: 20px;
+    margin: 0 5px;
+    transition: .3s;
+}
+.login-icon i:hover {
+    background: #e1d7d7;
+}
+
+
+/* login-form ends*/
+
+    </style>
+</head>
+<body>
+    
+<div class="login-singup">
+
+<!-- singup form -->
+
+    <div class="singup-form">
+        <div class="singup-form-item">
+            <h2>sing up</h2>
+            <div class="singup-form-menu">
+                <input type="text" placeholder="User Name..."> <br>
+                <input type="email" placeholder="Email Address...">  <br>
+                <input type="password" placeholder="Password..."> <br>
+                <input type="submit" value="sing up">
+                <P>already have an account? <a href="#" onclick="logIn()">log in.</a></P>
+                <div class="singup-icon">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-google"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- login form -->
+
+<div class="login-form">
+    <div class="login-form-item">
+        <h2>log in</h2>
+        <div class="login-form-menu">
+            <input type="email" placeholder="Email Address...">  <br>
+            <input type="password" placeholder="Password..."> <br>
+            <input type="submit" value="log in">
+            <P>i don't have an account? <a href="#" onclick="singUp()">sing up.</a></P>
+            <div class="singup-icon">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-google"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- js file -->
+<script src="assests/jquery-3.6.0.min.js"></script>
+<script src="assests/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
